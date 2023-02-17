@@ -26,7 +26,6 @@ jobs:
         with:
           cache-on-failure: "true"
           shared-key: ${{steps.install_rust.outputs.cachekey}}
-          save-if: ${{ github.event_name == 'push' && 'true' || 'false' }}
 
       - name: Install dependencies
         run: cargo install just --version 1.13.0
